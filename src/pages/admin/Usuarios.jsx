@@ -23,10 +23,10 @@ const Usuarios = () => {
   }, []);
 
   return (
-    <div>
-      <div>admin usuarios</div>
+    <div className="p-20">
+      <div className="text-center text-lg mb-14 italic font-bold">ADMINISTRADOR DE USUARIOS</div>
       <PrivateComponent roleList={['admin']}>
-        <button className='bg-red-400'>Hola RBAC</button>
+        <button className='m-3 bg-red-400'>Hola RBAC</button>
       </PrivateComponent>
       <table className='tabla'>
         <thead>
@@ -113,6 +113,7 @@ const EstadoUsuario = ({ user }) => {
   }, [estado, user]);
 
   return (
+     
     <select value={estado} onChange={(e) => setEstado(e.target.value)}>
       <option value='' disabled>
         Seleccione un estado

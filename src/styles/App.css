@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0px;
+}
+ 
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.choco{
+  color: #D16B18;
+  font-size: xx-large;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+   
+}
+
+.mainContainer > main{
+  height: 100%;
+  overflow-y: scroll ;
+}
+
+.mainContainer > footer{
+   
+  padding: 15px;
+}
+ 
+
+ 
+
+.logo {
+  height: 70px;
+}
+
+.botonGenerico {
+  border: 0px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+.botonGenerico:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.textbutton{
+  
+  position: relative;
+   
+  text-transform: uppercase;
+  text-decoration: none;
+  
+
+}
+.mainButton {
+  position: relative;
+  height: 28px;
+  top:8px;
+  background-color: #1bb76e;
+  color: white;
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mainButton:hover {
+  box-shadow: 1px 1px green;
+}
+
+.mainButton2 {
+  position: relative;
+  height: 55px;
+  width: 140px;
+  background-color: #D16B18;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.mainButton2:hover, .mainButton2:focus {
+  box-shadow: 1px 1px #f09e5c;
+}
+
+.secondaryButton {
+  background-color: #66d8f5;
+  color: white;
+}
+
+.secondaryButton:hover {
+  box-shadow: 1px 1px rgb(119, 229, 233);
+}
+
+.buscar {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 4px;
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buscar:focus-within {
+  border: 1px solid blue;
+}
+
+.buscar > input {
+  outline: none;
+  border: 0px;
+}
+
+.iconoBusqueda:hover {
+  color: blue;
+}
+
+.breedCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly ;
+  z-index: 100;
+}
+.breedCardContainer2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  z-index: 100;
+  
+}
+.breedCardTeamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly ;
+  z-index: 100;
+}
+.breedCard {
+  margin: 10px;
+  background-color: #f5caa7;
+  box-shadow: 5px 10px 5px rgb(255, 221, 221);
+  border-radius: 10px;
+}
+
+.breedTitle {
+  color: #D16B18;
+  margin: 20px  ;
+   
+  /* font-size: x-large; */
+
+  
+}
+
+.contenedorImagen {
+  width: 240px;
+  height: 300px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.contenedorImagen3 {
+  width: 140px;
+  height: 200px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.contenedorImagen:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.contenedorImagen > img {
+  object-fit: cover;
+  width: 1200px;
+ 
+}
+
+/* .img {
+  height: 180px;
+  width: 180px;
+}  */
+
+.backgroundVerde{
+  background-color: green;
+}
+
+/* Carrusel */
+
+.slider{
+  position: relative;
+  
+  flex: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.right-arrow{
+  position: absolute;
+  /* background-color: #c7f4ff5b;
+  height: 314px;  */
+  
+  /* top: 130px; */
+  /* left: 1300px;
+  font-size: 3.5rem;
+  color:rgba(99, 93, 93, 0.918) ; */
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow{
+  position: absolute;
+  
+  background-color: #c7f4ff5b;
+  height: 314px; 
+  /* margin-right:10px; */
+  /* top: 130px; */
+  /* left: 4px; */
+  font-size: 3.5rem;
+  color:rgba(99, 93, 93, 0.918) ;
+  z-index: 10;
+  cursor: pointer; 
+  user-select: none;
+}
+
+.slide {
+   /* width: 1500px; */
+  transition-duration: 1s ease  ;
+}
+
+.slide.active{
+  width: 1300px;
+  opacity: 1;
+  transition-duration: 1.5s;
+  transform: scale(1.08);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+   
+  padding-left: unset;
+  position: relative;
+  margin: auto;
+}
+
+
+.tabla {
+  width: 100%;
+  margin: 10px;
+  overflow-y: scroll;
+}
+
+.tabla td,
+.tabla th {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.tabla th {
+  background-color: #04aa46;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.tabla tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabla tr:hover {
+  background-color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+

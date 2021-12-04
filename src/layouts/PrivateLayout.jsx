@@ -5,6 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import ReactLoading from 'react-loading';
 import { obtenerDatosUsuario } from 'utils/api';
 import { useUser } from 'context/userContext';
+import HeaderSidebar from 'components/HeaderSdebar';
 
 const PrivateLayout = ({ children }) => {
   const { isAuthenticated, isLoading, loginWithRedirect, getAccessTokenSilently, logout } =
@@ -59,8 +60,9 @@ const PrivateLayout = ({ children }) => {
     <div className='flex w-screen h-screen'>
       <div className='flex flex-col lg:flex-row flex-nowrap h-full w-full'>
         <Sidebar />
+        <HeaderSidebar />
         <SidebarResponsive />
-        <main className='flex w-full  overflow-y-scroll items-center justify-center'>
+        <main className=' fixed top-20 left-72 overflow-y-scroll h-full items-center w-10/12'>
           {children}
         </main>
       </div>
