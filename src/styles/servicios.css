@@ -20,6 +20,7 @@
 }
 
 
+
 .main-menu{
     padding: 10px;
     margin-bottom:  30px;
@@ -92,8 +93,12 @@ v.v-application--is-ltr .v-expansion-panel-header {
     background-color: #fef5ee;
     color: #e39e67;
 }
-li#menu-item-x {padding: 20px 0px 15px 20px;    border:1px rgb(57, 130, 130);
-border-bottom: 1px solid#D16B18;
+li#menu-item-x {padding: 20px 0px 15px 20px;   
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+     border:1px rgb(57, 130, 130);
+border: 1px solid#D16B18;
  background-color: #fef5ee;border-top: solid 1px #D16B18;
  -webkit-transition: all 0.3s linear;
  -moz-transition: all 0.3s linear;
@@ -102,6 +107,7 @@ border-bottom: 1px solid#D16B18;
  transition: all 0.3s linear;
  position: relative;
  display: block;
+ 
  -webkit-backface-visibility: visible;
 }
 li#menu-item-y {padding: 20px 0px 15px 20px;    border:1px rgb(57, 130, 130);

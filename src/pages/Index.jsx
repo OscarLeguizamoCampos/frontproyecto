@@ -4,10 +4,12 @@ import CardRecomendados from "components/CardRecomendados";
 import CardTeam from "components/CardTeam";
 import CardTestimonio from "components/CardTestimonio";
 import Carrusel from "components/Carrusel";
- 
+import Vivian from "media/vivian.jpeg" 
+import Oscar from "media/oscar.jpg" 
 
-import borderCollie from 'media/borderCollie.jpg';
-import rhodesian from 'media/rhodesian.jpg'
+import fosforita from 'media/productos/fosforita.jpg';
+import KCL from 'media/productos/Kcl.jpg'
+import nitrafos from 'media/productos/nitrafos.jpg'
 const Index = () => {
   const { darkMode } = useDarkMode();
   return (
@@ -18,9 +20,9 @@ const Index = () => {
         <h1 class="relative choco text-center font-semibold text-6x1 row top-2 bottom-2 p-8">PRODUCTOS RECIENTES</h1>
         <div>
         <ul className ="breedCardContainer container mx-auto justify-center   ">
-          <CardRecomendados nombreProducto = "Ferrita" precioProducto = "30.000" imagen = {borderCollie} ruta = '/borderCollie'/>
-          <CardRecomendados nombreProducto = "Ferrita" precioProducto = "30.000" imagen = {rhodesian}  ruta = '/xxs' /> 
-          <CardRecomendados nombreProducto = "Ferrita" precioProducto = "30.000" imagen = {borderCollie} ruta = '/borderCollie'/>
+          <CardRecomendados nombreProducto = "Fosforita" precioProducto = "30.000" imagen = {fosforita} ruta = '/borderCollie'/>
+          <CardRecomendados nombreProducto = "KCL" precioProducto = "30.000" imagen = {KCL}  ruta = '/xxs' /> 
+          <CardRecomendados nombreProducto = "Nitrafos" precioProducto = "30.000" imagen = {nitrafos} ruta = '/borderCollie'/>
 
         </ul>
         </div>
@@ -48,8 +50,8 @@ const Index = () => {
       <h1 class="relative choco text-center font-semibold text-6x1 row top-2 bottom-2 p-8">EQUIPO</h1>
   
         <ul className="breedCardTeamContainer">
-          <CardTeam nombreEstudiante='OSCAR LEGUIZAMO' imagen='https://placeimg.com/150/150/people' cargo='Product Owner' />
-          <CardTeam nombreEstudiante='VIVIAN HOME' imagen='https://placeimg.com/150/150/people' cargo='Scrum Master' />
+          <CardTeam nombreEstudiante='OSCAR LEGUIZAMO' imagen= {Oscar} cargo='Product Owner' />
+          <CardTeam nombreEstudiante='VIVIAN HOME' imagen= {Vivian} cargo='Scrum Master' />
           {/* <CardTeam nombreEstudiante='ANDRES CARRILLO' imagen='https://placeimg.com/150/150/people' cargo='Team Developer' />
           <CardTeam nombreEstudiante='DAVIAN GALLEGO' imagen='https://placeimg.com/150/150/people' cargo='Team Developer' />
           <CardTeam nombreEstudiante='WILSON CORTES' imagen='https://placeimg.com/150/150/people' cargo='Team Developer' /> */}

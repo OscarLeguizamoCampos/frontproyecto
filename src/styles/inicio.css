@@ -298,7 +298,7 @@ font-size: 15px;
 }
 a:hover {
 color: #180e00;
-text-decoration: underline;
+text-decoration: none;
 }
 .c a:hover {
 color: #7c694c;
@@ -321,25 +321,25 @@ width:90px;
 .grid_12{
 display:flex;
  position: relative;
- top: 107px;
+ /* top: 107px; */
  height: 44px;
  margin-right: 0px;
  margin-left: 0px;
 -webkit-text-size-adjust: 100%;
 font-family: 'Open Sans', sans-serif;
-font-size: 12px;
+
 color: #D16B18;
 display: inline;
 float: left;
 
-width: 97.5%;
+width: 100%;
 margin-bottom: 0;
 
 }
 h1.headline.marble.headline {
 text-align: start;
   position: relative;
-  width: 1200px;
+  /* width: 1200px; */
   right: 0px;
   margin-bottom: 0px;
   left: 0px;
@@ -366,7 +366,7 @@ line-height: 54px;
 margin-bottom: 0;
 }
 h1.headline.marble.headline {
-padding-top: 7.4px;
+padding-top: 4px;
   text-align: start;
   font-weight:bolder;
   font-size: 26px;
@@ -374,7 +374,7 @@ padding-top: 7.4px;
 }
 div#crumbs{
 position: relative;
-bottom: 41px;
+bottom: 34px;
 right: 20px;
 
 }
@@ -385,9 +385,10 @@ a.nav-link  {
     color: #d16b18;
 }
 .delimiter {
-padding: 0 5px;
+padding: 0 6px ;
  
 font-size: 13px;
+
 }
 .page-path {
 display: block;

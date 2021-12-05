@@ -41,7 +41,7 @@ const MenuMobile = () => {
                             <div className="flex items-center justify-between  ">
                                 <div className="flex items-center ">        
                                     <Link to="/cursos/menu-servicios" className="  menu nav-link has-sub-menu inline-block align-middle justify-between" >
-                                        <div onClick={() => setIsSubList(2)} fill="none" className="  items-center md:hidden   bg-transparent h-11 w-60  group border-indigo-500 hover:bg-pro-50 
+                                        <div onClick={() => setIsSubList(!isSubList)} fill="none" className="  items-center md:hidden   bg-transparent h-11 w-60  group border-indigo-500 hover:bg-pro-50 
                                             hover:shadow-lg group-hover:text-gray-900 transition md:ease-out duration-700 grid grid-cols-1  border-b border-pro-100  ">
                                             <div  >
                                         
@@ -58,7 +58,7 @@ const MenuMobile = () => {
                                     </Link>
                                 </div>
                             </div>
-                            {isSubList === 2 && (
+                            {isSubList === isList && (
                                 <div className="  ">
                                     <div className="flex items-center  ">                                        
                                         <Link to="/cursos/curso-fertilizantes" className="  menu nav-link has-sub-menu  ">
@@ -84,7 +84,7 @@ const MenuMobile = () => {
                             <div className="flex items-center justify-between  ">
                                 <div className="flex items-center ">        
                                     <Link to="/products/productos" className="  menu nav-link has-sub-menu inline-block align-middle justify-between" >
-                                        <div onClick={() => setIsSubList(3)} fill="none" className="  items-center md:hidden   bg-transparent h-11 w-60  group border-indigo-500 hover:bg-pro-50 
+                                        <div onClick={() => setIsSubList(!isSubList)} fill="none" className="  items-center md:hidden   bg-transparent h-11 w-60  group border-indigo-500 hover:bg-pro-50 
                                             hover:shadow-lg group-hover:text-gray-900 transition md:ease-out duration-700 grid grid-cols-1  border-b border-pro-100  ">
                                             <div  >
                                         
@@ -101,7 +101,7 @@ const MenuMobile = () => {
                                     </Link>
                                 </div>
                             </div>
-                            {isSubList === 3 && (
+                            {isSubList === isList && (
                                 <div className="  ">
                                     <div className="flex items-center  ">                                        
                                         <Link to="/products/fertilizantes" className="  menu nav-link has-sub-menu  ">
