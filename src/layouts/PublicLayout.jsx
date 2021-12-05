@@ -1,13 +1,16 @@
 import React from 'react';
 import Navbar from 'components/Navbar';
+import MenuMobile from 'components/MenuMobile';
 import Footer from 'components/Footer';
 
 const PublicLayout = ({ children }) => {
   return (
-    <div className='flex flex-col justify-between h-screen'>
-      <Navbar />
-      <main className='h-full overflow-y-scroll bg-blue-400'>{children}</main>
-      <Footer />
+    <div className = 'mainContainer'>
+    <Navbar />
+    <MenuMobile />        
+    <main > 
+        {children} <div class="z-30"><Footer /></div> 
+    </main>
     </div>
   );
 };

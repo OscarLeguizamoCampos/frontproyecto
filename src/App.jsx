@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'styles/styles.css';
 import "styles/inicio.css";
 import "styles/App.css";
+import "styles/servicios.css"
 import Registro from 'pages/auth/Registro';
 import AuthLayout from 'layouts/AuthLayout';
 import { DarkModeContext } from 'context/darkMode';
@@ -17,6 +18,18 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import Usuarios from 'pages/admin/Usuarios';
 import { UserContext } from 'context/userContext';
 import PrivateRoute from 'components/PrivateRoute';
+
+import MenuServicios from "pages/cursos/menu-servicios";
+import CursoFertilizantes from "pages/cursos/curso-fertilizantes";
+import CursoControlPlagas from "pages/cursos/curso-control-plagas";
+import Productos from "pages/products/productos";
+import Fertilizantes from "pages/products/fertilizantes";
+import Plaguicidas from "pages/products/plaguicidas";
+import Clones from "pages/products/clones";
+import Herramientas from "pages/products/herramientas";
+import Infraestructura from "pages/products/infraestructura";
+import Contactar from "pages/contactar";
+ 
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -73,11 +86,60 @@ function App() {
                     </Switch>
                   </AuthLayout>
                 </Route>
-                <Route path={['/']}>
+                <Route
+                  path={[
+                    "/",
+                    "/cursos/menu-servicios",
+                    "/cursos/curso-fertilizantes",
+                    "/cursos/curso-control-plagas",
+                    "/products/productos",
+                    "/products/fertilizantes",
+                    "/products/plaguicidas",
+                    "/products/clones",
+                    "/products/herramientas",
+                    "/products/infraestructura",
+                    "/contactar",
+                  ]}
+                >
                   <PublicLayout>
+                    <Switch>
+                      {/* RUTA CONTACTAR */}
+                      <Route path="/contactar">
+                        <Contactar />
+                      </Route>
+                      {/* RUTAS PRODUCTOS */}
+                      <Route path="/products/infraestructura">
+                        <Infraestructura />
+                      </Route>
+                      <Route path="/products/herramientas">
+                        <Herramientas />
+                      </Route>
+                      <Route path="/products/clones">
+                        <Clones />
+                      </Route>
+                      <Route path="/products/plaguicidas">
+                        <Plaguicidas />
+                      </Route>
+                      <Route path="/products/fertilizantes">
+                        <Fertilizantes />
+                      </Route>
+                      <Route path="/products/productos">
+                        <Productos />
+                      </Route>
+                      {/* RUTAS SERVICIOS */}
+                      <Route path="/cursos/curso-control-plagas">
+                        <CursoControlPlagas />
+                      </Route>
+                      <Route path="/cursos/curso-fertilizantes">
+                        <CursoFertilizantes />
+                      </Route>
+                      <Route path="/cursos/menu-servicios">
+                        <MenuServicios />
+                      </Route>                
                     <Route path='/'>
                       <Index />
                     </Route>
+                    </Switch>
                   </PublicLayout>
                 </Route>
               </Switch>

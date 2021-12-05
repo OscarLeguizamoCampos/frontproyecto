@@ -1,0 +1,214 @@
+
+
+.acordion{
+    width: 120px;
+    position: relative;
+    top:128px;
+}
+.logo > img{
+    width: 1200px;
+    height: 100px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.menu-container{
+    width: 40px;
+    
+    
+}
+
+
+.main-menu{
+    padding: 10px;
+    margin-bottom:  30px;
+    display: flex;
+   
+}
+span.current {
+    font-size: 12px;
+}
+.header-second{
+    margin-bottom: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+
+}
+.header-top{
+    padding: 4px;
+    margin-top: 20px;
+    width: 1200px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+
+}
+
+.two{
+    display: flex;
+   
+    margin-left: 70px;
+    margin-bottom: 10px;
+    margin-left: 272px;
+    width: 600px;
+    margin-bottom: 36px;
+
+}
+
+.three{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+
+.v-application--wrap {
+    flex: 1 1 auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
+    position: relative;
+    background-color: #fef5ee;
+}
+v.v-application--is-ltr .v-expansion-panel-header {
+    text-align: left;
+    background-color: #fef5ee;
+
+}
+.v-application--is-ltr .v-expansion-panel-header {
+    text-align: left;
+    background-color: #fef5ee;
+    color: #e39e67;
+}
+li#menu-item-x {padding: 20px 0px 15px 20px;    border:1px rgb(57, 130, 130);
+border-bottom: 1px solid#D16B18;
+ background-color: #fef5ee;border-top: solid 1px #D16B18;
+ -webkit-transition: all 0.3s linear;
+ -moz-transition: all 0.3s linear;
+ -o-transition: all 0.3s linear;
+ -ms-transition: all 0.3s linear;
+ transition: all 0.3s linear;
+ position: relative;
+ display: block;
+ -webkit-backface-visibility: visible;
+}
+li#menu-item-y {padding: 20px 0px 15px 20px;    border:1px rgb(57, 130, 130);
+    border-bottom: 1px solid #D16B18; background-color: #fef5ee;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    position: relative;
+    display: block;
+    -webkit-backface-visibility: visible;text-decoration-color: #D16B18;
+}
+
+.v-expansion-panel-content__wrap {
+    background-color: #fef5ee;
+}
+a.nav-link.has-sub-menu {
+    color: rgba(201, 27, 27, 0.5);
+}
+
+/* COnTACTAR */
+.seccion-contacto{
+    position: relative;
+    top:180px;
+    left:-1150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+    color:#D16B18; 
+}
+.contactar_formulario {
+    height: 400px;
+    width: 450px;
+    float: right;
+    padding: 7px;
+  
+    font-size: 17px;
+    border-radius: 10px;
+    border:1px solid #D16B18;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    margin-left: 50%;
+}
+
+.contactar_mapa {
+    position: relative;
+    top:180px;
+    left:-550px;
+    height: 400px;
+    width: 450px;
+    float: right;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    
+}
+
+::placeholder {
+    color:rgb(209, 107, 24);
+}
+
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    color:rgb(209, 107, 24);
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;}
+
+input[type="text"] {
+        background-color: #dba47927;
+        border: 1px solid #D16B18;
+        border-radius: 5px;
+    }
+button.btn.btn-secondary {
+        margin-top: 0px;
+        background-color: #d16b18;
+        color: white;
+        margin-left:144px;
+    }
