@@ -5,7 +5,7 @@ import Footer from 'components/Footer';
 
 const PublicLayout = ({ children }) => {
   return (
-    <div className = 'mainContainer'>
+    <div className = 'mainContainer w-full'>
     <Navbar />
     <MenuMobile />        
     <main > 

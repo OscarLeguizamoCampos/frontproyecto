@@ -26,6 +26,7 @@ ul {
 }
 
 .mainContainer > main{
+  
   height: 100%;
   overflow-y: scroll ;
 }
@@ -161,6 +162,12 @@ ul {
   display: flex;
   margin-bottom: 10px;
 }
+.contenedorImagenPro {
+  width: 260px;
+  height: 300px;
+  display: flex;
+  margin-bottom: 10px;
+}
 .contenedorImagen3 {
   width: 195px;
   height: 200px;
@@ -168,6 +175,10 @@ ul {
   margin-bottom: 10px;
 }
 .contenedorImagen:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.contenedorImagenPro:hover {
   cursor: pointer;
   transform: scale(1.02);
 }

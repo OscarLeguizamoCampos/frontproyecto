@@ -17,6 +17,7 @@ module.exports = {
     yellow: colors.yellow,
     red: colors.red,
     green: colors.green,
+    gray: colors.gray,
     pro: {
       50: '#fcd7a6bd',
       100: '#d16b18',

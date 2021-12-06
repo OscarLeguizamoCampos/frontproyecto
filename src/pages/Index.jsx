@@ -20,9 +20,9 @@ const Index = () => {
         <h1 class="relative choco text-center font-semibold text-6x1 row top-2 bottom-2 p-8">PRODUCTOS RECIENTES</h1>
         <div>
         <ul className ="breedCardContainer container mx-auto justify-center   ">
-          <CardRecomendados nombreProducto = "Fosforita" precioProducto = "30.000" imagen = {fosforita} ruta = '/borderCollie'/>
-          <CardRecomendados nombreProducto = "KCL" precioProducto = "30.000" imagen = {KCL}  ruta = '/xxs' /> 
-          <CardRecomendados nombreProducto = "Nitrafos" precioProducto = "30.000" imagen = {nitrafos} ruta = '/borderCollie'/>
+          <CardRecomendados nombreProducto = "Fosforita" precioProducto = "30.000" imagen = {fosforita} ruta = '/products/fertilizantes'/>
+          <CardRecomendados nombreProducto = "KCL" precioProducto = "30.000" imagen = {KCL}  ruta = '/products/fertilizantes' /> 
+          <CardRecomendados nombreProducto = "Nitrafos" precioProducto = "30.000" imagen = {nitrafos} ruta = '/products/fertilizantes'/>
 
         </ul>
         </div>
