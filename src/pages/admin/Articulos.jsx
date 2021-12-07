@@ -431,7 +431,7 @@ const Articulos = () => {
   const [mostrarTabla, setMostrarTabla] = useState(true);
   const [articulos, setArticulos] = useState([]);
   const [textoBoton, setTextoBoton] = useState("Crear Nuevo Articulo");
-  const [colorBoton, setColorBoton] = useState("orange");
+  const [colorBoton, setColorBoton] = useState("indigo");
   const [ejecutarConsulta, setEjecutarConsulta] = useState(true);
   const [loading, setLoading] = useState(false);
 
@@ -468,10 +468,10 @@ const Articulos = () => {
   useEffect(() => {
     if (mostrarTabla) {
       setTextoBoton("Crear Nuevo Articulo");
-      setColorBoton("orange");
+      setColorBoton("indigo");
     } else {
       setTextoBoton("Mostrar Todos los Articulos");
-      setColorBoton("gray");
+      setColorBoton("green");
     }
   }, [mostrarTabla]);
   return (
@@ -527,7 +527,7 @@ const TablaArticulos = ({ loading, listaArticulos, setEjecutarConsulta }) => {
         value={busqueda}
         onChange={(e) => setBusqueda(e.target.value)}
         placeholder="Buscar"
-        className="border border-pro-100 px-3 py-1 self-start rounded-md focus:outline-none focus:border-indigo-500"
+        className="border-2 border-gray-700 px-3 py-1 self-start rounded-md focus:outline-none focus:border-indigo-500"
       />
       <h2 className="text-2xl font-extrabold text-gray-800">
         Todos los Articulos
@@ -541,11 +541,8 @@ const TablaArticulos = ({ loading, listaArticulos, setEjecutarConsulta }) => {
             <tr>
               <th>Id</th>
               <th>Nombre del Articulo</th>
-              <th>Categoria</th>
-              <th>Descripcion</th>
-              <th>Precio</th>
-              <th>Unidad de medida</th>
-              <th>Cantidad</th>
+              <th>Marca del Articulo</th>
+              <th>Modelo del Articulo</th>
               <PrivateComponent roleList={['admin']}>
                   <th>Acciones</th>
               </PrivateComponent>
@@ -570,11 +567,8 @@ const TablaArticulos = ({ loading, listaArticulos, setEjecutarConsulta }) => {
           return (
             <div className="bg-gray-400 m-2 shadow-xl flex flex-col p-2 rounded-xl">
               <span>{el.name}</span>
-              <span>{el.category}</span>
-              <span>{el.description}</span>
-              <span>{el.precio}</span>
-              <span>{el.unit}</span>
-              <span>{el.cantidad}</span>
+              <span>{el.brand}</span>
+              <span>{el.model}</span>
             </div>
           );
         })}
@@ -589,11 +583,8 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
   const [infoNuevoArticulo, setInfoNuevoArticulo] = useState({
     _id: articulo._id,
     name: articulo.name,
-    category: articulo.category,
-    description: articulo.description,
-    precio: articulo.precio,
-    unit: articulo.unit,
-    cantidad: articulo.cantidad
+    brand: articulo.brand,
+    model: articulo.model,
   });
 
   const actualizarArticulo = async () => {
@@ -603,11 +594,8 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
       articulo._id,
       {
         name: infoNuevoArticulo.name,
-        category: infoNuevoArticulo.category,
-        description: infoNuevoArticulo.description,
-        precio: infoNuevoArticulo.precio,
-        unit: infoNuevoArticulo.unit,
-        cantidad: infoNuevoArticulo.cantidad,
+        brand: infoNuevoArticulo.brand,
+        model: infoNuevoArticulo.model,
       },
       (response) => {
         console.log(response.data);
@@ -646,7 +634,7 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
           <td>{infoNuevoArticulo._id}</td>
           <td>
             <input
-              className="bg-gray-50 border border-pro p-2 rounded-lg m-2"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
               type="text"
               value={infoNuevoArticulo.name}
               onChange={(e) =>
@@ -659,65 +647,26 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
           </td>
           <td>
             <input
-              className="bg-gray-50 border border-pro p-2 rounded-lg m-2"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
               type="text"
-              value={infoNuevoArticulo.category}
+              value={infoNuevoArticulo.brand}
               onChange={(e) =>
                 setInfoNuevoArticulo({
                   ...infoNuevoArticulo,
-                  category: e.target.value,
+                  brand: e.target.value,
                 })
               }
             />
           </td>
           <td>
             <input
-              className="bg-gray-50 border border-pro p-2 rounded-lg m-2"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
               type="text"
-              value={infoNuevoArticulo.description}
+              value={infoNuevoArticulo.model}
               onChange={(e) =>
                 setInfoNuevoArticulo({
                   ...infoNuevoArticulo,
-                  description: e.target.value,
-                })
-              }
-            />
-          </td>
-          <td>
-            <input
-              className="bg-gray-50 border border-pro p-2 rounded-lg m-2"
-              type="text"
-              value={infoNuevoArticulo.precio}
-              onChange={(e) =>
-                setInfoNuevoArticulo({
-                  ...infoNuevoArticulo,
-                  precio: e.target.value,
-                })
-              }
-            />
-          </td>
-          <td>
-            <input
-              className="bg-gray-50 border border-pro p-2 rounded-lg m-2"
-              type="text"
-              value={infoNuevoArticulo.unit}
-              onChange={(e) =>
-                setInfoNuevoArticulo({
-                  ...infoNuevoArticulo,
-                  unit: e.target.value,
-                })
-              }
-            />
-          </td>
-          <td>
-            <input
-              className="bg-gray-50 border border-pro p-2 rounded-lg m-2"
-              type="text"
-              value={infoNuevoArticulo.cantidad}
-              onChange={(e) =>
-                setInfoNuevoArticulo({
-                  ...infoNuevoArticulo,
-                  cantidad: e.target.value,
+                  model: e.target.value,
                 })
               }
             />
@@ -727,11 +676,8 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
         <>
           <td>{articulo._id.slice(20)}</td>
           <td>{articulo.name}</td>
-          <td>{articulo.category}</td>
-          <td>{articulo.description}</td>
-          <td>{articulo.precio}</td>
-          <td>{articulo.unit}</td>
-          <td>{articulo.cantidad}</td>
+          <td>{articulo.brand}</td>
+          <td>{articulo.model}</td>
         </>
       )}
       <PrivateComponent roleList={['admin']}>    
@@ -810,11 +756,8 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
     await crearArticulo(
       {
         name: nuevoArticulo.name,
-        category: nuevoArticulo.category,
-        description: nuevoArticulo.description,
-        precio: nuevoArticulo.precio,
-        unit: nuevoArticulo.unit,
-        cantidad: nuevoArticulo.cantidad,
+        brand: nuevoArticulo.brand,
+        model: nuevoArticulo.model,
       },
       (response) => {
         console.log(response.data);
@@ -836,92 +779,50 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
         Crear nuevo Articulo
       </h2>
       <form ref={form} onSubmit={submitForm} className="flex flex-col">
-        <label className="flex flex-col" Style="width:394px;" htmlFor="nombre">
+        <label className="flex flex-col" htmlFor="nombre">
           Nombre del Articulo
           <input
             name="name"
-            className="bg-pro-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
+            className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
             type="text"
-            placeholder="Nombre articulo"
+            placeholder="Corolla"
             required
           />
         </label>
-        <label className="flex flex-col  " htmlFor="categoria">
-          Categoria
+        <label className="flex flex-col" htmlFor="marca">
+          Marca del Articulo
           <select
-            Style="background-color:#dba47927;"
-            className="  border h-11 border-pro-100 p-2 rounded-lg m-2"
-            name="category"
+            className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
+            name="brand"
             required
             defaultValue={0}
           >
             <option disabled value={0}>
               Seleccione una opción
             </option>
-            <option>Fertilizantes</option>
-            <option>Plaguicidas</option>
-            <option>Clones</option>
-            <option>Herramientas</option>
-            <option>Infraestructura</option>
+            <option>Renault</option>
+            <option>Toyota</option>
+            <option>Ford</option>
+            <option>Mazda</option>
+            <option>Chevrolet</option>
           </select>
         </label>
-        <label className="flex flex-col" Style="width:394px;" htmlFor="nombre">
-          Descripción
+        <label className="flex flex-col" htmlFor="modelo">
+          Modelo del Articulo
           <input
-            name="name"
-            className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
-            type="text"
-            placeholder="Agregue descripción"
-            required
-          />
-        </label>
-        <label className="flex flex-col" Style="width:394px;" htmlFor="nombre">
-          Precio
-          <input
-            Style="background-color:#dba47927;"
-            name="name"
-            className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
+            name="model"
+            className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
             type="number"
-            placeholder="$ 0"
-            required
-          />
-        </label>
-        <label className="flex flex-col"  htmlFor="marca">
-          Unidad de medida
-          <select
-            Style="background-color:#dba47927;"
-            className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
-            name="category"
-            required
-            defaultValue={1}
-          >
-            <option disabled value={1}>
-              Seleccione una opción
-            </option>
-            <option>gr</option>
-            <option>kg</option>
-            <option>bulto</option>
-            <option>mL</option>
-            <option>c.c.</option>
-            <option>Litro</option>
-            <option>galón</option>
-          </select>
-        </label>
-        <label className="flex flex-col" Style="width:394px;" htmlFor="nombre">
-          Cantidad
-          <input
-            Style="background-color:#dba47927;"
-            name="name"
-            className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
-            type="number"
-            placeholder="Cantidad"
+            min={1992}
+            max={2022}
+            placeholder="2014"
             required
           />
         </label>
 
         <button
           type="submit"
-          className="col-span-2 bg-pro-100 p-2 rounded-full shadow-md hover:bg-orange-400 text-white"
+          className="col-span-2 bg-green-400 p-2 rounded-full shadow-md hover:bg-green-600 text-white"
         >
           Guardar Articulo
         </button>
