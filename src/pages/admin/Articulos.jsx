@@ -893,9 +893,9 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
             className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
             name="category"
             required
-            defaultValue={0}
+            defaultValue={1}
           >
-            <option disabled value={0}>
+            <option disabled value={1}>
               Seleccione una opción
             </option>
             <option>gr</option>
