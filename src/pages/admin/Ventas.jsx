@@ -107,7 +107,7 @@ const Ventas = () => {
         </label>
         <button
           type='submit'
-          className='col-span-2 bg-green-400 p-2 rounded-full shadow-md hover:bg-green-600 text-white'
+          className='col-span-2 bg-pro-100 p-2 rounded-full shadow-md hover:bg-orange-300 text-white'
         >
           Crear Venta
         </button>
@@ -166,7 +166,7 @@ const TablaArticulos = ({ articulos, setArticulos, setArticulosTabla }) => {
                 <option
                   key={nanoid()}
                   value={el._id}
-                >{`${el.name} ${el.brand} ${el.model}`}</option>
+                >{`${el.name} ${el.category} ${el.description} ${el.precio} ${el.unit} ${el.cantidad}`}</option>
               );
             })}
           </select>
@@ -174,7 +174,7 @@ const TablaArticulos = ({ articulos, setArticulos, setArticulosTabla }) => {
         <button
           type='button'
           onClick={() => agregarNuevoArticulo()}
-          className='col-span-2 bg-green-400 p-2 rounded-full shadow-md hover:bg-green-600 text-white'
+          className='col-span-2 bg-pro-100 p-2 rounded-3xl mx-5 shadow-md hover:bg-orange-300 text-white'
         >
           Agregar Artículo
         </button>
@@ -184,8 +184,9 @@ const TablaArticulos = ({ articulos, setArticulos, setArticulosTabla }) => {
           <tr>
             <th>Id</th>
             <th>Nombre</th>
-            <th>Marca</th>
-            <th>Modelo</th>
+            <th>Categoria</th>
+            <th>Descripcion</th>
+            <th>Unidad de medida</th>
             <th>Cantidad</th>
             <th>Valor Unitario</th>
             <th>Total</th>
@@ -220,8 +221,11 @@ const FilaArticulo = ({ art, index, eliminarArticulo, modificarArticulo }) => {
     <tr>
       <td>{articulo._id}</td>
       <td>{articulo.name}</td>
-      <td>{articulo.brand}</td>
-      <td>{articulo.model}</td>
+      <td>{articulo.category}</td>
+      <td>{articulo.description}</td>
+      <td>{articulo.precio}</td>
+      <td>{articulo.unit}</td>
+      <td>{articulo.cantidad}</td>
       <td>
         <label htmlFor={`valor_${index}`}>
           <input

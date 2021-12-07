@@ -4,7 +4,7 @@ const CursoFertilizantes = () => {
     return (
         <div>
             <Submenu2
-                title1="SERVICIOS"
+                title1="CURSO DE FERTILIZANTES"
                 subtitle1="INICIO"
                 subtitle2="SERVICIOS"
                 subtitle3="CURSO DE FERTILIZANTES"
@@ -45,18 +45,18 @@ const CursoFertilizantes = () => {
 
                     <h4 className="pb-8"><span className="font-bold">Tabla 1.</span> Recomendación de fertilizacion por planta de cacao </h4>
 
-                    <table className="table-fixed border-collapse border-pro-100 pb-8">
-                        <thead>
-                            <tr className="m-8 bg-red-200 hover:bg-red-300 border-t border-l border-pro-100">
+                    <table className="table-fixed border-collapse border-pro-100 pb-8 ">
+                        <thead >
+                            <tr className="m-8 bg-red-200 hover:bg-red-300 border-t border-l   border-pro-100">
                                 <th className="p-3   border-r w-1/4 border-pro-100" scope="col"></th>
-                                <th className="p-3    text-center border-r w-1/3 border-pro-100" scope="col">Triple 15 o 12-24-12</th>
+                                <th className="p-3    text-center border-r w-1/3 border-pro-100" scope="col"><p>Triple 15 o 12-24-12</p></th>
                                 <th className="p-3    text-center border-r w-1/3 border-pro-100" scope="col">Cafetero</th>
                             </tr>
                         </thead>
-                        <tbody className="pb-8 ">
+                        <tbody className="pb-8   ">
                             <tr className="p-8 border border-pro-100">
                                 <th className="pl-8 pt-1 pb-1 border border-pro-100" scope="row">Transplante</th>
-                                <td className=" text-center border-r  border-pro-100">75-100 gramos/planta/año</td>
+                                <td className=" text-justify border-r  border-pro-100">75-100 gramos/planta/año</td>
                                 <td className=" text-center border-r  border-pro-100">75-125 gramos/planta/año</td>
 
                             </tr>

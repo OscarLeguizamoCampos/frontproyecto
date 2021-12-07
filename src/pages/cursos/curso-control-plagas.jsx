@@ -4,7 +4,7 @@ const CursoControlPlagas = () => {
     return (
         <div>
             <Submenu2
-                title1="SERVICIOS"
+                title1="CURSO CONTROL DE PLAGAS"
                 subtitle1="INICIO"
                 subtitle2="SERVICIOS"
                 subtitle3="CURSO DE CONTROL DE PLAGAS"

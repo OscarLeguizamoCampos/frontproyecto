@@ -9,7 +9,7 @@ const Plaguicidas = () => {
     return (
         <div>
             <Submenu2
-                title1="PRODUCTOS"
+                title1="PLAGUICIDAS"
                 subtitle1="INICIO"
                 subtitle2="PRODUCTOS"
                 subtitle3="PLAGUICIDAS"
