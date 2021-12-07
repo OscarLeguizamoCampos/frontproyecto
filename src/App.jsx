@@ -43,7 +43,7 @@ function App() {
       domain='dev-jb58a4-s.us.auth0.com'
       clientId='S9FeasO28YXjShXu5kYs57o6oIh4Jd4g'
       // redirectUri='http://localhost:3000/admin'
-      redirectUri='https://cacaotech.herokuapp.com/'
+      redirectUri='https://cacaotech.herokuapp.com/admin'
 
       audience='concesonario-2'
     >
