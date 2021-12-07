@@ -5,7 +5,7 @@ const HeaderSidebar = () => {
     const { logout } = useAuth0();
 
     const cerrarSesion = () => {
-        logout({ returnTo: 'http://localhost:3000/' });
+        logout({ returnTo: 'https://cacaotech.herokuapp.com/' });
         localStorage.setItem('token', null);
       };
     return(

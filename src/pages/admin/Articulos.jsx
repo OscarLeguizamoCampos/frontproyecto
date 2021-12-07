@@ -431,7 +431,7 @@ const Articulos = () => {
   const [mostrarTabla, setMostrarTabla] = useState(true);
   const [articulos, setArticulos] = useState([]);
   const [textoBoton, setTextoBoton] = useState("Crear Nuevo Articulo");
-  const [colorBoton, setColorBoton] = useState("indigo");
+  const [colorBoton, setColorBoton] = useState("orange");
   const [ejecutarConsulta, setEjecutarConsulta] = useState(true);
   const [loading, setLoading] = useState(false);
 
