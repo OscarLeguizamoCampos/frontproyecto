@@ -156,7 +156,7 @@ const TablaArticulos = ({ loading, listaArticulos, setEjecutarConsulta }) => {
               <span>{el.name}</span>
               <span>{el.category}</span>
               <span>{el.description}</span>
-              <span>{el.precio}</span>
+              <span>{el.model}</span>
               <span>{el.unit}</span>
               <span>{el.cantidad}</span>
             </div>
@@ -175,7 +175,7 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
     name: articulo.name,
     category: articulo.category,
     description: articulo.description,
-    precio: articulo.precio,
+    model: articulo.model,
     unit: articulo.unit,
     cantidad: articulo.cantidad
   });
@@ -189,7 +189,7 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
         name: infoNuevoArticulo.name,
         category: infoNuevoArticulo.category,
         description: infoNuevoArticulo.description,
-        precio: infoNuevoArticulo.precio,
+        model: infoNuevoArticulo.model,
         unit: infoNuevoArticulo.unit,
         cantidad: infoNuevoArticulo.cantidad,
       },
@@ -275,7 +275,7 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
               onChange={(e) =>
                 setInfoNuevoArticulo({
                   ...infoNuevoArticulo,
-                  precio: e.target.value,
+                  model: e.target.value,
                 })
               }
             />
@@ -313,7 +313,7 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
           <td>{articulo.name}</td>
           <td>{articulo.category}</td>
           <td>{articulo.description}</td>
-          <td>{articulo.precio}</td>
+          <td>{articulo.model}</td>
           <td>{articulo.unit}</td>
           <td>{articulo.cantidad}</td>
         </>
@@ -396,7 +396,7 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
         name: nuevoArticulo.name,
         category: nuevoArticulo.category,
         description: nuevoArticulo.description,
-        precio: nuevoArticulo.precio,
+        model: nuevoArticulo.model,
         unit: nuevoArticulo.unit,
         cantidad: nuevoArticulo.cantidad,
       },
@@ -459,11 +459,11 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
             required
           />
         </label>
-        <label className="flex flex-col" Style="width:394px;" htmlFor="precio">
+        <label className="flex flex-col" Style="width:394px;" htmlFor="model">
           Precio
           <input
             Style="background-color:#dba47927;"
-            name="precio"
+            name="model"
             className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
             type="number"
             placeholder="$ 0"
