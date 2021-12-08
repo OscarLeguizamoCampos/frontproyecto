@@ -449,21 +449,21 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
             <option>Infraestructura</option>
           </select>
         </label>
-        <label className="flex flex-col" Style="width:394px;" htmlFor="nombre">
+        <label className="flex flex-col" Style="width:394px;" htmlFor="descripcion">
           Descripción
           <input
-            name="name"
+            name="description"
             className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
             type="text"
             placeholder="Agregue descripción"
             required
           />
         </label>
-        <label className="flex flex-col" Style="width:394px;" htmlFor="nombre">
+        <label className="flex flex-col" Style="width:394px;" htmlFor="precio">
           Precio
           <input
             Style="background-color:#dba47927;"
-            name="name"
+            name="precio"
             className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
             type="number"
             placeholder="$ 0"
@@ -475,7 +475,7 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
           <select
             Style="background-color:#dba47927;"
             className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
-            name="category"
+            name="unit"
             required
             defaultValue={1}
           >
@@ -491,11 +491,11 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
             <option>galón</option>
           </select>
         </label>
-        <label className="flex flex-col" Style="width:394px;" htmlFor="nombre">
+        <label className="flex flex-col" Style="width:394px;" htmlFor="cantidad">
           Cantidad
           <input
             Style="background-color:#dba47927;"
-            name="name"
+            name="cantidad"
             className="bg-gray-50 border h-11 border-pro-100 p-2 rounded-lg m-2"
             type="number"
             placeholder="Cantidad"
