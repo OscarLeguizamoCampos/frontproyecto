@@ -187,7 +187,7 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
       articulo._id,
       {
         name: infoNuevoArticulo.name,
-        category: infoNuevoArticulo.category,
+        brand: infoNuevoArticulo.brand,
         description: infoNuevoArticulo.description,
         model: infoNuevoArticulo.model,
         unit: infoNuevoArticulo.unit,
@@ -245,11 +245,11 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
             <input
               className="bg-gray-50 border border-pro p-2 rounded-lg m-2"
               type="text"
-              value={infoNuevoArticulo.category}
+              value={infoNuevoArticulo.brand}
               onChange={(e) =>
                 setInfoNuevoArticulo({
                   ...infoNuevoArticulo,
-                  category: e.target.value,
+                  brand: e.target.value,
                 })
               }
             />
@@ -311,7 +311,7 @@ const FilaArticulo = ({ articulo, setEjecutarConsulta }) => {
         <>
           <td>{articulo._id.slice(20)}</td>
           <td>{articulo.name}</td>
-          <td>{articulo.category}</td>
+          <td>{articulo.brand}</td>
           <td>{articulo.description}</td>
           <td>{articulo.model}</td>
           <td>{articulo.unit}</td>
@@ -394,7 +394,7 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
     await crearArticulo(
       {
         name: nuevoArticulo.name,
-        category: nuevoArticulo.category,
+        brand: nuevoArticulo.brand,
         description: nuevoArticulo.description,
         model: nuevoArticulo.model,
         unit: nuevoArticulo.unit,
@@ -430,12 +430,12 @@ const FormularioCreacionArticulos = ({ setMostrarTabla, listaArticulos, setArtic
             required
           />
         </label>
-        <label className="flex flex-col  " htmlFor="categoria">
+        <label className="flex flex-col  " htmlFor="marca">
           Categoria
           <select
             Style="background-color:#dba47927;"
             className="  border h-11 border-pro-100 p-2 rounded-lg m-2"
-            name="category"
+            name="brand"
             required
             defaultValue={0}
           >
